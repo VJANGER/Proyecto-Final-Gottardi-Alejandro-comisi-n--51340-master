@@ -51,8 +51,10 @@ const calcularCuotas = () => {
         return cuotas
     }
 };
+let prestamo = pedirPrestamo();
+let cuotas = calcularCuotas();
 
-const valorCuota = pedirPrestamo() / calcularCuotas();
-alert("El total a pagar es: $"+pedirPrestamo()+ " en " +calcularCuotas()+ " cuotas de: $"+valorCuota);
+const valorCuota = prestamo / cuotas;
+alert("El total a pagar es: $"+ prestamo + " en " + cuotas + " cuotas de: $"+valorCuota.toFixed(2));
 
 
