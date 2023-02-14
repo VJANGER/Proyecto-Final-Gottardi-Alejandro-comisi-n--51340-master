@@ -1,5 +1,9 @@
 alert("Bienvenido a tú banco")
 
+const prestamos = ["pesos", "dolares", "uva"];
+const filtro = prestamos.filter(prestamos => prestamos.includes('d'))
+console.log(filtro)
+
 const pedirPrestamo = () => {
     let moneda = ''
     let monto = 0
@@ -14,10 +18,10 @@ const pedirPrestamo = () => {
                 costos = 2.20
                 break;
             case 'dolares':
-                costos = 1.1
+                costos = 0.1
                 break;
             case 'uva':
-                costos = 1.01
+                costos = 0.5
                 break;
             default:
                 alert("Los datos ingresados no son correctos")
@@ -39,6 +43,7 @@ const calcularCuotas = () => {
             cuotas = parseInt(prompt("Ingrese 12, 24 o 36 cuotas:"))
             switch (cuotas) {
                 case 12:
+                case 18:
                 case 24:
                 case 36:
                     return cuotas
@@ -56,5 +61,34 @@ let cuotas = calcularCuotas();
 
 const valorCuota = prestamo / cuotas;
 alert("El total a pagar es: $"+ prestamo + " en " + cuotas + " cuotas de: $"+valorCuota.toFixed(2));
+
+console.log(Math.round(valorCuota))
+
+
+
+
+class Producto {
+    constructor(moneda, interes) {
+        this.moneda = moneda.toUpperCase();
+        this.interes = Number(interes);
+        this.solicitado = false;
+    }
+    sumarCostoAdmin() {
+        this.interes = this.interes * 0.21
+    }
+    vender() {
+        this.solicitado = true
+    }
+}
+const productos = []
+const producto1 = new Producto('pesos', 2.20)
+const producto2 = new Producto('dolares', 0.1)
+const producto3 = new Producto('uva', 0.5)
+productos.push(producto1, producto2, producto3)
+for (const producto of productos) {
+    producto.sumarCostoAdmin()
+    producto.vender()
+}
+console.log(productos)
 
 
