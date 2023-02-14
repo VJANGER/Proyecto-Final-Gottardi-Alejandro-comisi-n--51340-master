@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <title>Prestamos - Su banco</title>
 </head>
 <body>
-    <script src="./main.js"></script>
+    <div class="caja">
+        <div class="titulo">
+            <h1>Bienvenido a su banco</h1>
+            <h3>Genere su prestamo en pesos, dolares o U.V.A.</h3>
+        </div>
+        <div class="monto"></div>
+            <label>Ingrese el monto de su prestamo:
+                <input type="text">
+            </label>
+            <label>seleccione el plan de cuotas que desea
+                <select>
+                <option value="">(seleccione una opción)</option>
+                <option value="1">12</option>
+                <option value="2">18</option>
+                <option value="3">24</option>
+                <option value="4">36</option>
+                </select>
+            </label>
+            <label>seleccione que tipo de prestamo necesita
+                <select>
+                <option value="">(seleccione una opción)</option>
+                <option value="1">Pesos</option>
+                <option value="2">Dolares</option>
+                <option value="3">U.V.A.</option>
+                </select>
+            </label>
+        <div class="botonera">
+            <button class="cancelar">Cancelar</button>
+            <button class="aceptar">Aceptar</button>
+        </div>
+    </div>
+    <footer>copyright MMXXIII Su banco</footer>
+    <!-- <script src="./main.js"></script> -->
 </body>
 </html>

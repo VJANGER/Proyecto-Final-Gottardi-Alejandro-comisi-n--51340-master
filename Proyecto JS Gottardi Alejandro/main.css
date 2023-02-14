@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(45deg,lightblue, blue);
+}
+.caja{display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 50vw;
+    height: 600px;
+    margin: 100px auto;
+    border: 1px solid rgb(185, 180, 180);
+    border-radius: 16px;
+    box-shadow: 1px 1px 10px rgb(75, 73, 73);
+    background-color: #fefefe;
+}
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+}
+h1{
+    font-size: 3rem;
+}
+/*.monto{
+
+} */
+.aceptar{
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    border-radius: 8px;
+    border:none;
+    box-shadow: 1px 1px 10px rgb(75, 73, 73);
+}
+
+.cancelar{
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    border-radius: 8px;
+    border:none;
+    box-shadow: 1px 1px 10px rgb(75, 73, 73);
+    }
